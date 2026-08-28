@@ -87,24 +87,24 @@
         para entrar en VR. Verás tus controles Touch dibujados en las manos.
   -->
   <!-- El atributo "campo-estrellas" activa el componente que definimos arriba -->
-  <a-scene campo-estrellas="cantidad: 150">
+  <a-scene campo-estrellas="cantidad: 1520">
 
-    <!-- Cielo negro-azulado: el "espacio" -->
-    <a-sky color="#00010D"></a-sky>
+    <!-- Cielo negro-morado: el "espacio" -->
+    <a-sky color="#1D0047 "></a-sky>
 
     <!--
       LUZ: como el usuario hace las veces de Sol, ponemos una luz tipo "point"
       (bombilla) justo a la altura de los ojos del jugador, en el centro de
       todo. Es la que ilumina la cara de cada planeta que mira hacia el centro.
     -->
-    <a-entity light="type: point; color: #FFF3D0; intensity: 1.4; distance: 40"
+    <a-entity light="type: point; color: #edf5fa; intensity: 1.4; distance: 40"
                position="0 1.6 0"></a-entity>
     <!-- Luz ambiental tenue: para que el lado oscuro de los planetas no sea negro puro -->
     <a-entity light="type: ambient; color: #30304A; intensity: 0.6"></a-entity>
 
     <!-- Etiqueta flotante de bienvenida, fija frente a la posición inicial del jugador -->
-    <a-text value="Eres el centro del sistema solar.&#10;Los planetas giran a tu alrededor."
-            position="-2.4 2.4 -3" color="#FFFFFF" width="6"></a-text>
+    <a-text value="Ejercicio 2: MOdificación de los planetas.&#10;Eres el centro del universo."
+            position="-2.4 2.4 -3" color="#faaab7" width="6"></a-text>
 
     <!-- ============================================================
          MERCURIO — el más rápido y el más cercano
@@ -112,19 +112,19 @@
          ============================================================ -->
     <!-- Este "brazo" invisible gira sobre el eje Y (arriba-abajo) sin parar -->
     <a-entity position="0 1.6 0"
-              animation="property: rotation; to: 0 360 0; loop: true; dur: 4000; easing: linear">
+              animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear">
       <!-- Mercurio va desplazado 2 unidades del centro del brazo: por eso órbita -->
-      <a-sphere position="2 0 0" radius="0.12" color="#A9A9A9"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 1000; easing: linear"></a-sphere>
+      <a-sphere position="2 0 0" radius="0.12" color=" #E5E5E5"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 3300; easing: linear"></a-sphere>
     </a-entity>
 
     <!-- ============================================================
          VENUS
          ============================================================ -->
     <a-entity position="0 1.6 0"
-              animation="property: rotation; to: 0 360 0; loop: true; dur: 7000; easing: linear">
-      <a-sphere position="2.8 0 0" radius="0.22" color="#E3C16F"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 1800; easing: linear"></a-sphere>
+              animation="property: rotation; to: 0 360 0; loop: true; dur: 8500; easing: linear">
+      <a-sphere position="2.8 0 0" radius="0.22" color="#ff9b4a"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 4200; easing: linear"></a-sphere>
     </a-entity>
 
     <!-- ============================================================
@@ -132,14 +132,14 @@
          Tierra, y la Tierra gira alrededor del usuario)
          ============================================================ -->
     <a-entity position="0 1.6 0"
-              animation="property: rotation; to: 0 360 0; loop: true; dur: 12000; easing: linear">
+              animation="property: rotation; to: 0 360 0; loop: true; dur: 16000; easing: linear">
       <!-- "grupo-tierra" agrupa a la Tierra y a la Luna para que viajen juntas -->
       <a-entity position="3.6 0 0">
-        <a-sphere radius="0.28" color="#2E86FF"
-                  animation="property: rotation; to: 0 360 0; loop: true; dur: 2200; easing: linear"></a-sphere>
+        <a-sphere radius="0.28" color="#9FC164"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 1500; easing: linear"></a-sphere>
         <!-- Brazo de la Luna: gira alrededor de la Tierra (posición 0 0 0 LOCAL, no del usuario) -->
-        <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 1500; easing: linear">
-          <a-sphere position="0.6 0 0" radius="0.08" color="#CFCFCF"></a-sphere>
+        <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 700; easing: linear">
+          <a-sphere position="0.6 0 0" radius="0.08" color="#ECEAE1"></a-sphere>
         </a-entity>
       </a-entity>
     </a-entity>
@@ -148,18 +148,18 @@
          MARTE
          ============================================================ -->
     <a-entity position="0 1.6 0"
-              animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear">
-      <a-sphere position="4.4 0 0" radius="0.18" color="#C1440E"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 2100; easing: linear"></a-sphere>
+              animation="property: rotation; to: 0 360 0; loop: true; dur: 25000; easing: linear">
+      <a-sphere position="4.4 0 0" radius="0.18" color="#e66835"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 1910; easing: linear"></a-sphere>
     </a-entity>
 
     <!-- ============================================================
          JÚPITER — el más grande, gira lento porque está "más lejos"
          ============================================================ -->
     <a-entity position="0 1.6 0"
-              animation="property: rotation; to: 0 360 0; loop: true; dur: 35000; easing: linear">
-      <a-sphere position="5.8 0 0" radius="0.55" color="#D2A679"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 900; easing: linear"></a-sphere>
+              animation="property: rotation; to: 0 360 0; loop: true; dur: 50000; easing: linear">
+      <a-sphere position="5.8 0 0" radius="0.55" color="#A95318"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 330; easing: linear"></a-sphere>
     </a-entity>
 
     <!-- ============================================================
@@ -167,15 +167,46 @@
          como hijo de la esfera para que gire pegado al planeta
          ============================================================ -->
     <a-entity position="0 1.6 0"
-              animation="property: rotation; to: 0 360 0; loop: true; dur: 48000; easing: linear">
-      <a-sphere position="7 0 0" radius="0.48" color="#E6C68C"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 1000; easing: linear">
+              animation="property: rotation; to: 0 360 0; loop: true; dur: 46000; easing: linear">
+      <a-sphere position="7 0 0" radius="0.48" color="#FAE5BF"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 990; easing: linear">
         <!-- El anillo es hijo de la esfera: hereda su posición y gira con ella -->
-        <a-ring radius-inner="0.65" radius-outer="1" rotation="90 0 0" color="#C9B37E"
+        <a-ring radius-inner="0.65" radius-outer="1" rotation="90 0 0" color="#e3e0c0"
                 material="side: double; shader: flat"></a-ring>
       </a-sphere>
     </a-entity>
 
+      <!-- ============================================================
+         URANO — igual que los demás, pero le agregamos un anillo más delgado
+         que el de saturno como hijo de la esfera para que gire pegado al planeta
+         ============================================================ -->
+    <a-entity position="0 1.6 0"
+              animation="property: rotation; to: 0 360 0; loop: true; dur: 52000; easing: linear">
+      <a-sphere position="7 0 0" radius="0.48" color="#ACE5EE"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 820; easing: linear">
+        <!-- El anillo es hijo de la esfera: hereda su posición y gira con ella -->
+        <a-ring radius-inner="0.82" radius-outer="1" rotation="90 0 0" color="#4682B4"
+                material="side: double; shader: flat"></a-ring>
+      </a-sphere>
+    </a-entity>
+
+     <!-- ============================================================
+         NEPTUNO — el último de forma oficial
+         ============================================================ -->
+    <a-entity position="0 1.6 0"
+              animation="property: rotation; to: 0 360 0; loop: true; dur: 60000; easing: linear">
+      <a-sphere position="5.8 0 0" radius="0.55" color="#274687"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 1410; easing: linear"></a-sphere>
+    </a-entity>
+
+     <!-- ============================================================
+         PLUTON — el pilón
+         ============================================================ -->
+    <a-entity position="0 1.6 0"
+              animation="property: rotation; to: 0 360 0; loop: true; dur: 4000; easing: linear">
+      <a-sphere position="5.8 0 0" radius="0.55" color="#836837"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 550; easing: linear"></a-sphere>
+    </a-entity>
     <!-- ============================================================
          EL JUGADOR (rig): el punto 0 0 0 sobre el que giran los planetas.
          Por eso el jugador siempre queda "en el centro" del sistema solar.
